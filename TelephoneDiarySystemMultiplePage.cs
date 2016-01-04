@@ -48,7 +48,7 @@ namespace TelephoneDiarySystem
             );
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Successfully Saved...!");
+            MessageBox.Show("Successfully Saved with Git version control...!");
             Display();
         }
 

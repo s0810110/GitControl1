@@ -13,7 +13,10 @@ namespace TelephoneDiarySystem
 {
     public partial class Phone : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=Phone;Integrated Security=True");
+        /// <summary>
+        /// must make sure that full instance name is given in Data source field rather than just .
+        /// </summary>
+        SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=Phone;Integrated Security=True");
     
         public Phone()
         {
@@ -120,29 +123,33 @@ namespace TelephoneDiarySystem
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        Form2 f2;
+        private void form2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            if (f2 == null)
+            {
+                f2 = new Form2();
+                f2.MdiParent = this;
+                f2.FormClosed += f2_FormClosed;
+                f2.Show();
+            }
+            else
+                f2.Activate();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        void f2_FormClosed(object sender, FormClosedEventArgs e)
         {
-            panel1.Visible = false;
+            f2 = null;
+            
+            //throw new NotImplementedException();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void form3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            panel2.Visible = false;
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = false; panel1.Visible = false;
+            Form f3 = new Form3();
+            f3.MdiParent = this;
+            f3.Show();
+            
         }
     }
 }

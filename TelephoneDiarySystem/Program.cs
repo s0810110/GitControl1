@@ -16,7 +16,7 @@ namespace TelephoneDiarySystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Phone());
+            Application.Run(new Main());
         }
     }
 }

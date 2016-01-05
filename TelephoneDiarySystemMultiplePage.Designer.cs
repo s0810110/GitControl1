@@ -286,17 +286,18 @@
             // 
             // form2ToolStripMenuItem
             // 
+            this.form2ToolStripMenuItem.Image = global::TelephoneDiarySystem.Properties.Resources.model;
             this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
-            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
+            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(206, 30);
             this.form2ToolStripMenuItem.Text = "Form2";
-            this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
+     //       this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
             // form3ToolStripMenuItem
             // 
             this.form3ToolStripMenuItem.Name = "form3ToolStripMenuItem";
             this.form3ToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
             this.form3ToolStripMenuItem.Text = "Form3";
-            this.form3ToolStripMenuItem.Click += new System.EventHandler(this.form3ToolStripMenuItem_Click);
+      //      this.form3ToolStripMenuItem.Click += new System.EventHandler(this.form3ToolStripMenuItem_Click);
             // 
             // Phone
             // 
